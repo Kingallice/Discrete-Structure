@@ -1,0 +1,24 @@
+package sum.square.difference;
+
+import javax.swing.JOptionPane;
+
+public class SumSquareDifference 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println(SumSquareDiff(Integer.parseInt(JOptionPane.showInputDialog("Enter a number."))));
+    }
+    public static int SumSquareDiff(int num)
+    {
+        int diff = 0, sumSquare = 0, sum = 0;
+        
+        for(int i = 0; i <= num; i++)
+        {
+            sumSquare += (i * i);
+            sum += i;
+        }
+        sum = sum*sum;
+        diff = sum-sumSquare;
+        return diff;
+    }
+}
