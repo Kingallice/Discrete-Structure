@@ -1,0 +1,34 @@
+package even.fibonacci.numbers;
+
+public class EvenFibonacciNumbers 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("Sum of Even Fibonacci Numbers Below 4 Million: " + SumEvenFibo());
+    }
+    public static int SumEvenFibo()
+    {
+        int CONSTMAX = 4000000;
+        int prevNum = 1;
+        int nextNum = 1;
+        int sum = 0;
+        do
+        {
+            System.out.println(prevNum);
+            System.out.println(nextNum);
+            prevNum += nextNum;
+            nextNum += prevNum;
+            
+            if(prevNum%2 == 0)
+            {
+                sum += prevNum;
+            }
+            if(nextNum%2 == 0)
+            {
+                sum += nextNum;
+            }    
+        }
+        while (prevNum < CONSTMAX && nextNum < CONSTMAX);
+        return sum;
+    }
+}
