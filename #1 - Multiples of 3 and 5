@@ -1,0 +1,22 @@
+package multiples.of.pkg3.and.pkg5;
+
+import javax.swing.JOptionPane;
+
+public class MultiplesOf3And5 {
+    public static void main(String[] args) {
+        int number = Integer.parseInt(JOptionPane.showInputDialog("Enter an integer."));
+        JOptionPane.showMessageDialog(null,SumMultiples3AND5(number));
+    }
+    //Increments from 1 to number
+    //Sums numbers between exclusively if a multiple of 3 or 5
+    public static int SumMultiples3AND5(int num)
+    {
+        int sum = 0;
+        for(int i = 1; i < num; i++)
+        {
+            if (i%3 == 0 || i%5 == 0)
+                sum += i;
+        }
+        return sum;
+    }
+}
