@@ -1,0 +1,28 @@
+package special.pythagorean.triplet;
+
+public class SpecialPythagoreanTriplet {
+
+    public static void main(String[] args) 
+    {
+        System.out.println(PythagoreanTriplet());
+    }
+    public static int PythagoreanTriplet()
+    {
+        int a = 0, b = 0, c = 0;
+        for(int i = 1; i < 1000; i++)
+        {
+            for(int j = 1; j < 1000; j++)
+            {
+                double k = i*i + j*j;
+                k = Math.sqrt(k);
+                if(i+j+k == 1000)
+                {
+                    a = i;
+                    b = j;
+                    c = (int)k;
+                }
+            }
+        }
+        return a*b*c;
+    }
+}
