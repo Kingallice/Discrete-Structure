@@ -1,0 +1,35 @@
+package longestcollatzsequence;
+
+public class LongestCollatzSequence {
+
+    public static void main(String[] args) 
+    {
+        System.out.println("Longest Collatz Sequence: " + LongestCollatzSeq(1000000));
+    }   
+    public static int LongestCollatzSeq(int High)
+    {
+        int out = 0, Count = 1, prevCount = 0;
+        for(int i = 0; i < High; i++)
+        {
+            long num = i;
+            while(num > 1)
+            {
+                if(num%2 == 0)
+                    num = num/2;
+                else
+                    num = 3*num + 1;
+                Count++;
+            }
+            if(Count > prevCount)
+            {
+                prevCount = Count;
+                out = i;
+                System.out.println("New Count: " + Count + "   Current Number: " + out);
+            }
+            if (num == 1) {
+                Count = 0;
+            }
+        }
+        return out;
+    }
+}
