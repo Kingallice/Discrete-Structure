@@ -1,0 +1,79 @@
+package largest.prime.factor;
+
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.List;
+
+public class LargestPrimeFactor 
+{
+    static String num = "600851475143";
+    public static void main(String[] args) 
+    {
+        System.out.println(LarPriFactor(new BigInteger(num)));
+    }
+    public static BigInteger LarPriFactor(BigInteger num)
+    {
+        long[] Factors = Factor(num.longValue());
+        List<String> PrimeFactors = new ArrayList<>();
+        for(int i = 0; i < Factors.length; i++)
+        {
+            if(isPrime(Factors[i]))
+            {
+                System.out.println(i + " : " + Factors[i]);
+                PrimeFactors.add(Factors[i] + "");
+            }
+        }
+        BigInteger prev = new BigInteger("0");
+        for(int i = 0; i < PrimeFactors.size(); i++)
+        {
+            if(new BigInteger(PrimeFactors.get(i)).compareTo(prev) > 0)
+            {
+                prev = new BigInteger(PrimeFactors.get(i));
+            }
+        }
+        return prev;
+    }
+    public static boolean isPrime(long num)
+    {
+        if(num==0||num==1)
+            return false;
+        for(int i=2;i<=num/2;i++)
+        {
+            if(num%i==0)
+            {
+                return false;
+            }
+        }                  
+        return true;
+    }
+    //Outputs array of all factors of a number
+    public static long[] Factor(long num)
+    {
+        long[] FactorArr = new long[1];
+        long i = 1;
+        try
+        {
+            List<String> Factors = new ArrayList<>();
+            for(i = 2; i < num; i++)
+            {
+                if(num%i==0)
+                {
+                    Factors.add("" + i);
+                }
+            }
+            FactorArr = new long[Factors.size()];
+            for(int j = 0; j < Factors.size(); j++)
+            {
+                FactorArr[j] = Long.parseLong(Factors.get(j));
+                System.out.println(FactorArr[j]);
+            }
+            System.out.println(i);
+            return FactorArr;
+        }
+        catch(Exception e)
+        {
+            System.out.println(e + " : " + i);
+        }
+        return FactorArr;
+    }
+}
