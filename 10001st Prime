@@ -1,0 +1,16 @@
+#Python
+LastPrime = 10001
+PrimeCount = 0
+i = 2
+lastPrime = 0
+while(PrimeCount < LastPrime):
+    for j in range (2, (i//2)+1):
+        if(i%j == 0):
+            break
+    else:
+        lastPrime = i
+        #print(i)
+        PrimeCount += 1
+    i += 1
+
+print ("Last Prime: ", lastPrime)
