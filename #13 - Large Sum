@@ -107,6 +107,7 @@ public class LargeSum {
 "53503534226472524250874054075591789781264330331690";
         System.out.println(AddArray(NumberArray(numbers)));
     }
+    //adds all numbers in an array
     public static String AddArray(BigInteger[] Arr)
     {
         BigInteger sum = new BigInteger("0");
@@ -116,6 +117,7 @@ public class LargeSum {
         }
         return sum.toString().substring(0,10);
     }
+    //Outputs array that stores all 50-digit numbers
     public static BigInteger[] NumberArray(String str)
     {
         BigInteger[] Arr = new BigInteger[100];
