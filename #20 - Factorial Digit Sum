@@ -1,0 +1,10 @@
+##Python
+start = 100
+num = 1
+for i in range(1,start+1):
+    num = num*i
+text = str(num)
+out = 0
+for i in range(len(text)):
+    out += int(text[i])
+print out
