@@ -1,0 +1,9 @@
+##Python
+power = 1000
+num = 2**power
+text = str(num)
+out = 0
+for i in range(len(text)):
+    out += int(text[i])
+
+print(out)
