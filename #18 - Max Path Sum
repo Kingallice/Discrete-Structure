@@ -1,0 +1,76 @@
+#I challenged myself to do this one
+#I wanted to attempt to make this efficient
+#I got the idea from here \/
+#https://lucidmanager.org/data-science/project-euler-18/
+#This was still very difficult to do. I probably restarted at least 10 times
+
+# - - - - - - - - - - - - Inputs - - - - - - - - - - - - - - - - - - - - - - - - - #
+input1 = """
+03
+07 04
+02 04 06
+08 05 09 03"""
+#23 - 03,07,04,09
+input2 = """
+75
+95 64
+17 47 82
+18 35 87 10
+20 04 82 47 65
+19 01 23 75 03 34
+88 02 77 73 07 63 67
+99 65 04 28 06 16 70 92
+41 41 26 56 83 40 80 70 33
+41 48 72 33 47 32 37 16 94 29
+53 71 44 65 25 43 91 52 97 51 14
+70 11 33 28 77 73 17 78 39 68 17 57
+91 71 52 38 17 14 91 43 58 50 27 29 48
+63 66 04 68 89 53 67 30 73 16 69 87 40 31 
+04 62 98 27 23 09 70 98 73 93 38 53 60 04 23""" 
+#1074 - 75,64,82,87,82,75,73,28,83,32,91,78,58,73,93
+
+# - - - - - - - - - - - - Variables - - - - - - - - - - - - - - - - - - - - - - - - - #
+string = input2.strip().split("\n")
+arrS = []
+num1 = 0
+num2 = 0
+# - - - - - - - - - - - - Places Input Into Array - - - - - - - - - - - - - - - - - - - - - - - - - #
+for a in range(len(string) - 1,-1,-1):
+    arrA = string[a].split()
+##    print("A - ", arrA)
+##    if a != 0:
+##        arrB = string[a - 1].split()
+##        lenB = len(arrB)
+    arrS += [arrA]
+# - - - - - - - - - - - - Prints Array - - - - - - - - - - - - - - - - - - - - - - - - - #
+def printArr (array):
+    text = ''
+    for i in range(len(array)):
+        if i%2 == 0:
+            print(text,array[i])
+            text += "    "
+        else:
+            print(text,array[i])
+            text += "   "
+# - - - - - - - - - - - - Variables - - - - - - - - - - - - - - - - - - - - - - - - - #
+printArr(arrS)
+b = []
+arrTemp = []
+# - - - - - - - - - - - - Shortens Triangle Until One Element Remains - - - - - - - - - - - - - - - - - - - - - - - - - #
+for a in arrS:
+    if(a == arrS[0]):
+        b = a
+    else:
+        for i in range(len(a)):
+            num1 = int(a[i]) + int(b[i])
+            num2 = int(a[i]) + int(b[i+1])
+            num = max(num1,num2)
+##            print(a[i], "+", b[i], "=",num1, "\n",
+##                  a[i], "+", b[i+1], "=",num2, "\n",
+##                  "max: ",num, "\n")
+            arrTemp += [num]
+            num1 = 0
+            num2 = 0
+        b = arrTemp
+        arrTemp = []
+print ("Answer:",num)
