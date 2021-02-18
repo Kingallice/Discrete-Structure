@@ -1,0 +1,19 @@
+# - - - - - - - - - Variables - - - - - - - #
+size = 20
+# - - - - - - #
+size += 1
+out = size - 1
+FirstArr = [1 for i in range(1,size+1)]
+SecondArr = [i for i in range(1,size+1)]
+arr = [FirstArr] + [SecondArr]
+Array = []
+for i in range(1,out):
+    for j in range(len(arr[0])):
+        if j == 0:
+            Array += [1]
+        else:
+            Array += [Array[j-1] + arr[i][j]]
+    arr += [Array]
+    Array = []
+
+print("Answer:", arr[out][out])
