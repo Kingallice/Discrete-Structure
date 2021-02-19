@@ -1,0 +1,11 @@
+from datetime import date
+Year = 1901
+EndYear = 2000
+
+Sundays = 0
+
+for i in range(Year,EndYear+1):
+    for j in range(1,13):
+        if(date(i,j,1).weekday() == 6):
+            Sundays+=1
+print(Sundays)
