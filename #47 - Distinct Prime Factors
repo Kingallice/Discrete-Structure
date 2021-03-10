@@ -1,0 +1,81 @@
+import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
+
+public class DistinctPrimesFactors {
+    
+    public static void main(String[] args) 
+    {
+        //Displays Answer
+        System.out.println("Answer: " + DistinctPrimesFactors());
+    }
+    public static int DistinctPrimesFactors()
+    {
+        //Sets Variables
+        LocalTime start = LocalTime.now();
+        int[] Ints = new int[4];
+        int numP = 0, numFact = 0, i = 0;
+        //Runs loop if 4 consectutive integers are not found
+        while (numFact != 4) {
+            long t = ChronoUnit.SECONDS.between(start, LocalTime.now());
+            int[] a = Factor(i);
+            //Loops to check if there are 4 
+            //  prime factors for the current number
+            for (int j = 0; j < a.length; j++) {
+                if (isPrime(a[j])) {
+                    numP++;
+                    if (numP == 4) {
+                        Ints[numFact] = i;
+                        numFact += 1;
+                    }
+                }
+            }
+            //Resets number of consective numbers if there is a break
+            if (numP != 4) {
+                numFact = 0;
+            }
+            numP = 0;
+            //Iterates current number
+            i++;
+            //Displays time passed if time changed since last time
+            if(ChronoUnit.SECONDS.between(start, LocalTime.now()) != t)
+            {
+                System.out.println("Seconds Passed: " + t);
+            }
+        }
+        return Ints[0];
+    }
+    //Checks if number is prime
+    public static boolean isPrime(int num)
+    {
+        if(num==0||num==1)
+            return false;
+        for(int i=2;i<=num/2;i++)
+        {
+            if(num%i==0)
+            {
+                return false;
+            }
+        }                  
+        return true;
+    }
+    //Outputs array of all factors of a number
+    public static int[] Factor(int num)
+    {
+        List<String> Factors = new ArrayList<>();
+        for(int i = 1; i < num; i++)
+        {
+            if(num%i==0)
+            {
+                Factors.add("" + i);
+            }
+        }
+        int[] FactorArr = new int[Factors.size()];
+        for(int i = 0; i < Factors.size(); i++)
+        {
+            FactorArr[i] = Integer.parseInt(Factors.get(i));
+        }
+        return FactorArr;
+    }
+}
