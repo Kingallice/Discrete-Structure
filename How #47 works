@@ -1,0 +1,24 @@
+Problem:
+
+The first two consecutive numbers to have two distinct prime factors are:
+
+14 = 2 × 7
+15 = 3 × 5
+
+The first three consecutive numbers to have three distinct prime factors are:
+
+644 = 2² × 7 × 23
+645 = 3 × 5 × 43
+646 = 2 × 17 × 19.
+
+Find the first four consecutive integers to have four distinct prime factors each. What is the first of these numbers?
+
+Solution:
+
+A loop is ran whle the currunet number of concurrent integers is not 4. 
+Within this loop we run code to find all factors of each number. 
+These values are stored into an array. Each factor is then checked for whether it is  prime. 
+If it is we increment a variable for the number of prime factors. 
+This variable is then checked to see if it equals 4. If it does, we increment the concurrent integer variable.
+After the loop if the variable is not equal to 4, the concurrent integer variable is reset and the process runs again.
+This goes until four consective integer are found that have four distinct prime factors each.
