@@ -1,0 +1,103 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.math.BigInteger;
+import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class RSAEncryption {
+    //start time
+    static long start;
+    //BigIntegers of values 1 and zero
+    static BigInteger one = new BigInteger("1"), zero = new BigInteger("0");
+    static Random rand;
+    //Bit Length of numbers
+    static int bitLength = 2048;
+    //Message to be encoded/decoded
+    //Message must be in CAPS or be Numbers
+    static String message = "0123456789", OrigMessage = message;
+    //BigInteger variables to be set
+    static BigInteger p, q, n, p1, q1, phi, e, d;
+    
+    public static void main(String[] args) {
+        try {
+            start = System.currentTimeMillis();
+            rand = new Random();
+            //Sets up file
+            File file = new File("RSAEncryption.txt");
+            FileWriter fileWriter = new FileWriter(file,true);
+            //Changes message into ASCII code
+            toASCII();
+            //Set values for p,q,n,p1,q1,phi,e,d
+            setValues();
+            //Makes message a BigInteger
+            BigInteger m = new BigInteger(message);
+            //Encrypts message
+            BigInteger r = m.modPow(e, n);
+            //Decrypts message
+            BigInteger m2 = r.modPow(d, n);
+            //Formats output
+            String output
+                    = "Bit Length = " + bitLength + "\n"
+                    + "p = " + p.toString() + "\n"
+                    + "q = " + q.toString() + "\n"
+                    + "n = " + n.toString() + "\n"
+                    + "(p - 1) = " + p1.toString() + "\n"
+                    + "(q - 1) = " + q1.toString() + "\n"
+                    + "e = " + e.toString() + "\n"
+                    + "d = " + d.toString() + "\n"
+                    + "Original Message: " + OrigMessage + "\n"
+                    + "ASCII Message(m): " + m.toString() + "\n"
+                    + "Message Encoded(r): " + r.toString() + "\n"
+                    + "Message Decoded(m2): " + m2.toString() + "\n"
+                    + "Text Message: " + ASCIItoString(m2.toString()) + "\n"
+                    + "Time Taken: " + ((System.currentTimeMillis() - start)/1000) + "s\n\n";
+            //Prints the output
+            System.out.println(output);
+            //Appends to file
+            fileWriter.append(output);
+            fileWriter.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(RSAEncryption.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(RSAEncryption.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    //Sets values that are need to start
+    public static void setValues()
+    {                
+        p = BigInteger.probablePrime(bitLength, rand);
+        q = BigInteger.probablePrime(bitLength, rand);
+        n = p.multiply(q);
+        p1 = p.subtract(one);
+        q1 = q.subtract(one);
+        phi = p1.multiply(q1);        
+        e = BigInteger.probablePrime(bitLength, rand);
+        d = e.modInverse(phi);
+    }
+    //Converts the message to ASCII code
+    public static void toASCII()
+    {
+        byte[] a = message.getBytes();
+        String in = "";
+        for (int i = 0; i < a.length; i++) {
+            in += a[i];
+        }
+        message = in;
+    }
+    //Converts a given message in ASCII code to a string literal
+    public static String ASCIItoString(String s)
+    {
+        String out = "";
+        char[] sChar = s.toCharArray();
+        for (int i = 0; i < sChar.length - 1; i += 2) {
+            byte[] b = new byte[1];
+            b[0] = Byte.parseByte(sChar[i] + "" + sChar[i + 1]);
+            s = new String(b);
+            out += s;
+        }
+        return out;
+    }
+}
