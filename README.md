@@ -13,7 +13,7 @@
     - [#8 Largest Product in a Series](./%238%20-%20Largest%20Product%20in%20a%20Series)
     - [#9 Special Pythagorean Triplet](./%239%20-%20Special%20Pythagorean%20Triplet)
     - [#10 Summation of Primes](./%2310%20-%20Summation%20of%20Primes)
-    - [#11 Largest Product in Grid](./%2310%20-%20Largest%20Product%20in%20Grid)
+    - [#11 Largest Product in Grid](./%2311%20-%20Largest%20Product%20in%20Grid)
     - [#12 Highly Divisible Triangular Number](./%2312%20-%20Highly%20Divisible%20Triangular%20Number)
     - [#13 Large Sum](./%2313%20-%20Large%20Sum)
     - [#14 Longest Collatz Sequence](./14%23%20-%20Longest%20Collatz%20Sequence)
