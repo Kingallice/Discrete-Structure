@@ -1,0 +1,4 @@
+I added the ability to change the cat that is being pet.
+  -selects randomly from list of 10 cats to pet
+I also made the purr different everytime that you click to pet the cat.
+  -selects randomly from a list of 6 sounds to play
