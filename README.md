@@ -16,7 +16,7 @@
     - [#11 Largest Product in Grid](./ProjectEuler/%2311%20-%20Largest%20Product%20in%20Grid)
     - [#12 Highly Divisible Triangular Number](./ProjectEuler/%2312%20-%20Highly%20Divisible%20Triangular%20Number)
     - [#13 Large Sum](./ProjectEuler/%2313%20-%20Large%20Sum)
-    - [#14 Longest Collatz Sequence](./ProjectEuler/14%23%20-%20Longest%20Collatz%20Sequence)
+    - [#14 Longest Collatz Sequence](./ProjectEuler/%2314%20-%20Longest%20Collatz%20Sequence)
     - [#15 Lattice Paths](./ProjectEuler/%2315%20-%20Lattice%20Paths)
     - [#16 Power Digit Sum](./ProjectEuler/%2316%20-%20Power%20Digit%20Sum)
     - [#17 Number Letter Counts](./ProjectEuler/%2317%20-%20Number%20Letter%20Counts)
