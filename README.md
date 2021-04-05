@@ -26,13 +26,19 @@
     - [#47 Distinct Prime Factors - Midterm](./%2347%20-%20Distinct%20Prime%20Factors)
       - [How](./How%20%2347%20works)
 
-## 2. Homework 3
+## 2. Homework 3 - RSA Encryption
   - [x] Complete
   - [Source Code](./RSA%20Encryption%20-%20Source)
   - [Extra Credit - Output](./RSA%20Encryption%20-%20Output)
-## 3. Homework 4
+## 3. Homework 4 - AppInventor - HelloPurr Tutorial
   - [x] Complete
-## 4. Homework 5
+  - [Project](./HelloPurr.aia)
+  - Additions
+    - Added ability to swap cat being pet
+      - Randomly selects new cat from a list 
+    - Added differing purrs
+      - When petting, a random purr sound will be selected from a list
+## 4. Homework 5 - 
   - [ ] Complete
-## 5. Homework 6
+## 5. Homework 6 - 
   - [ ] Complete
