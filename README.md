@@ -1,2 +1,2 @@
 # Discrete-Structure
-[Progress](../progress.jpg)
+[Progress](../Progress.jpg)
