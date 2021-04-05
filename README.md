@@ -23,11 +23,13 @@
     - [#18 Max Path Sum](./%2318%20-%20Max%20Path%20Sum)
     - [#19 Counting Sundays](./%2319%20-%20Counting%20Sundays)
     - [#20 Factorial Digit Sum](./%2320%20-%20Factorial%20Digit%20Sum)
-    - [#47 Distinct Prime Factors](./%2347%20-%20Distinct%20Prime%20Factors)
+    - [#47 Distinct Prime Factors - Midterm](./%2347%20-%20Distinct%20Prime%20Factors)
       - [How](./How%20%2347%20works)
 
 ## 2. Homework 3
   - [x] Complete
+  - [Source Code](./RSA%20Encryption%20-%20Source)
+  - [Extra Credit - Output](./RSA%20Encryption%20-%20Output)
 ## 3. Homework 4
   - [x] Complete
 ## 4. Homework 5
