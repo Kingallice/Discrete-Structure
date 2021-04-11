@@ -41,6 +41,8 @@
 ## 4. Homework 5 - 
   - [x] Complete
   - [Tutorial](https://learn.unity.com/project/creator-kit-beginner-code?uv=2020.2) 
+    - Tutorial gives base project and asks you to use its assets to add some features to the game
+      - I had to add an effect to potions, a money spawner, and edit code for the spawner script. 
   - [Project.zip](https://unkearney-my.sharepoint.com/:u:/g/personal/moseln_lopers_unk_edu/EcZl2esFBWBLi1l_QVT3nGYBmXHBhqXA_kTD58mNXccaBQ?e=mSDRQK)
 ## 5. Homework 6 - 
   - [ ] Complete
