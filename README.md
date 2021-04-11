@@ -40,5 +40,6 @@
       - When petting, a random purr sound will be selected from a list
 ## 4. Homework 5 - 
   - [ ] Complete
+  - [Tutorial](https://learn.unity.com/project/creator-kit-beginner-code?uv=2020.2) 
 ## 5. Homework 6 - 
   - [ ] Complete
