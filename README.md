@@ -38,7 +38,7 @@
       - Randomly selects new cat from a list 
     - Added differing purrs
       - When petting, a random purr sound will be selected from a list
-## 4. Homework 5 - 
+## 4. Homework 5 - Creator Kit: Beginner Code
   - [x] Complete
   - [Tutorial](https://learn.unity.com/project/creator-kit-beginner-code?uv=2020.2) 
     - Tutorial gives base project and asks you to use its assets to add some features to the game
