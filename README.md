@@ -49,3 +49,4 @@
   - [x] Complete
   - [Project.zip](https://unkearney-my.sharepoint.com/:u:/g/personal/moseln_lopers_unk_edu/EURgFIB5YBZAsRZ9QEPQLiMBi70XfjiNLOPYJmLf37e8vw?e=JQaEMO)
   - [Video](https://youtu.be/W8P6MruiFAE) 
+  - [Write Up](https://github.com/Kingallice/Discrete-Structure/blob/main/Space%20Invaders%20-%20Final%20Write%20up)
